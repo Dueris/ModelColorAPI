@@ -18,7 +18,7 @@ public class ModelColorAPI {
         final long curTime = System.currentTimeMillis();
         ModelColorAPI api = create("skins");
         BufferedImage img = api.createSourceFile(
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIl766a0lQj9cdFeXUqsaZc3aFStvBeqtvdw&usqp=CAU",
+            "https://s.namemc.com/i/f0982553f0070d57.png",
             "testingSource");
         try {
             api.createTransformed(

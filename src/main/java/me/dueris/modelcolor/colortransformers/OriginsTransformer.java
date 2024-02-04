@@ -6,6 +6,7 @@ public class OriginsTransformer implements ColorTransformer{
 
     @Override
     public Color transform(Color color, double r, double g, double b) {
+        if(color.getAlpha() == 255 && color.getRed() == 0 && color.getGreen() == 0 && color.getBlue() == 0) return new Color(color.getRed(), color.getBlue(), color.getGreen(), 0); // Assume transparent, lets not do this lol
         int red = color.getRed();
         int green = color.getGreen();
         int blue = color.getBlue();
