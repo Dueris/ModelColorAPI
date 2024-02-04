@@ -1,5 +1,2 @@
-before_install:
-  - wget https://github.com/sormuras/bach/raw/master/install-jdk.sh
-  - sdk install java 17.0.1.fx-zulu
-env:
-  ENVIRONMENT: "production"
+jdk:
+  - openjdk17
