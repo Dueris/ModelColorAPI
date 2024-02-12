@@ -36,6 +36,9 @@ public class Utils {
         outputDir.mkdirs();
 
         File outputFile = new File(savePath, fileName);
+        if(outputFile.exists()){
+            Files.delete(outputFile.toPath());
+        }
         ImageIO.write(image, "png", outputFile);
     }
 }
