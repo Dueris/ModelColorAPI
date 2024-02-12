@@ -3,6 +3,7 @@ package me.dueris.modelcolor;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.nio.file.Files;
 import java.util.logging.Logger;
 import java.awt.image.*;
 
@@ -17,6 +18,9 @@ public class Utils {
             outputDir.mkdirs();
 
             File outputFile = new File(savePath, fileName + ".png");
+            if(outputFile.exists()){
+                Files.delete(outputFile.toPath());
+            }
             ImageIO.write(image, "png", outputFile);
 
             return image;
